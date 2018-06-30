@@ -1,0 +1,8 @@
+<database-conf>
+<datasource>
+	<driver>com.mysql.jdbc.Driver</driver>
+	<url>jdbc:mysql://localhost:3306/softTesting?useUnicode=true&amp;characterEncoding=utf-8</url>
+	<user>root</user>
+	<password>fwh19970312</password>
+</datasource>
+</database-conf>

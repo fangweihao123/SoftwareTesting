@@ -73,6 +73,7 @@ public class LoginServlet extends HttpServlet {
 		   Productuser puser= Ld.login(name, password);
 		   if(puser==null)
 		   {
+			   response.getWriter().write("error");
 			   this.doError(request, response,"productuserL_tip.login.fail");
 		   }
 		   else
@@ -81,6 +82,7 @@ public class LoginServlet extends HttpServlet {
 			   String superuser = puser.getSuperuser();
 			   HttpSession mysession = request.getSession(false);
 			   mysession.setAttribute("productuser", puser);
+			   response.getWriter().write("success");
 				if(superuser.equals("1")){//普通注册用户
 					 this.doBrowse(request, response,"/product/products.jsp");
 				}else if(superuser.equals("2")){//分配了能看到某些药品价格的用户

@@ -33,7 +33,7 @@ public class ShopCartServlet extends HttpServlet {
 	   //获取登录状态（登录或退出系统）；
 	   String state= request.getParameter("a");
 	   if(state.equals("add"))//向购物车添加产品动作
-	   {
+	   {	
 		   this.addtoShopCart(request, response);
 	   }
 	   if(state.equals("find"))//查找购物车添加产品动作

@@ -11,9 +11,12 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+
+import org.apache.log4j.Logger;
   
 public class SendMail {   
   
+	private static final Logger logger = Logger.getLogger(SendMail.class);
 	//private static final String SMTP_HOST="smtp.163.com";   
 	//private static final String SENDER_NAME="北京亚思晟科技有限公司";   //显示的发件人别名信息
 	private static final String SUBJECT="图书询价回复(亚思晟科技)";   //标题
@@ -30,7 +33,8 @@ public class SendMail {
 	 * @param customerAddress 客户邮件地址
 	 * @param mge 邮件内容
 	 */
-	public void sendMessage(String fromAddress,String username,String password,String toAddress,String customerAddress,String mge){   
+	public void sendMessage(String fromAddress,String username,String password,String toAddress,String customerAddress,String mge){
+		
 		Properties props=new Properties();   
 		String mailType = this.cutFromAddress(fromAddress);
 		String mailserver=null;
@@ -102,8 +106,10 @@ public class SendMail {
 	
 	public static void main(String[] args){   
 		SendMail sendMail=new SendMail();   
-		sendMail.sendMessage("lixing051116@163.com", "lixing051116", "C2008119521", "312280465@qq.com", "312280465@163.com", "测试邮件服务设置");
+		sendMail.sendMessage("m15317097810@163.com", "15317097810", "fwh19970312", "1352785889@qq.com", "fangpo@sina.com", "哈哈1");
 		String email="lixing051116@163.com";
 		System.out.println(email.substring(0, email.indexOf("@")));
+	
+		//ServletActionContext.getRequest().setAttribute("result","adminsuccess");  
 	}   
 }   

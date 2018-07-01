@@ -46,6 +46,7 @@ public class LoginDAO {
         
          return null;
    }
+	
 	 public List getalluser() {
 		 Connection con = DataAccess.getConnection();
 		 String sql="select * from productuser p  order by p.uid ";

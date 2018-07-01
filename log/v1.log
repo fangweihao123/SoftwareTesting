@@ -1,0 +1,4 @@
+2018-07-01 01:32:00 ERROR SendMail:112 - This is Error message
+java.lang.Exception: Testing
+	at com.ascent.util.SendMail.main(SendMail.java:112)
+2018-07-01 01:32:00 ERROR SendMail:113 - This is error message.

@@ -74,6 +74,8 @@ public class SendMail {
 		Session session=Session.getInstance(props);   
 		session.setDebug(true);
 		try{   
+			if(mge.length() == 0)
+				throw new Exception("邮件的内容不能为空，不然容易被识别为垃圾邮件");
 			System.out.println("发送开始！"); 
 			Message msg=new MimeMessage(session);   
 			msg.setFrom(new InternetAddress(fromAddress,customerAddress));  // 设置发件Email和邮件别名

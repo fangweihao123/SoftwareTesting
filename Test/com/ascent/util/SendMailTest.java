@@ -14,7 +14,7 @@ public class SendMailTest extends TestCase {
 
 	public void testSendMessage() {
 		SendMail sendMail=new SendMail();
-		sendMail.sendMessage("5317097810@163.com", "15317097810", "fwh19970312", "152785889@qq.com", "fangpo@163.com", "first");
+		sendMail.sendMessage("m15317097810@163.com", "15317097810", "fwh19970312", "137012120@qq.com", "fangpo@163.com", "");
 	}
 	
 
